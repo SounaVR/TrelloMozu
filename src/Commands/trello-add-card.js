@@ -35,10 +35,9 @@ module.exports = {
             }
         })
         .then(response => {
-            
             const embed = new MessageEmbed()
                 .setColor('RANDOM')
-                .setTitle(`Carte ajoutée : "${cardName}" dans la liste "${listName}"`)
+                .setTitle(`Carte "${cardName}" ajoutée dans la liste "${listName}"`)
             interaction.reply({ content: `Réponse: ${response.status} ✅`, embeds: [embed] });
             return response.text();
         })
